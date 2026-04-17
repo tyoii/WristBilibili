@@ -2,11 +2,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
+    // 为内置 ExoPlayer 新版依赖提供编译 SDK
+    compileSdkVersion 33
     defaultConfig {
         applicationId "cn.luern0313.wristbilibili"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 33
         versionCode 16
         versionName "3.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
