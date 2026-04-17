@@ -25,6 +25,10 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
+      - name: Prepare Lson dependency project
+        run: |
+          git clone --depth=1 https://github.com/luern0313/Lson.git ../Lson
+
       - name: Build Debug APK
         run: ./gradlew --no-daemon :app:assembleDebug
 
