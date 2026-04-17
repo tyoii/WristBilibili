@@ -28,6 +28,9 @@ jobs:
       - name: Prepare Lson dependency project
         run: |
           git clone --depth=1 https://github.com/luern0313/Lson.git ../Lson
+          # 兼容本项目 Kotlin 插件版本，移除 Lson 内重复声明的 kotlin plugin version
+          sed -i "s/id 'org.jetbrains.kotlin.jvm' version '[^']*'/id 'org.jetbrains.kotlin.jvm'/" ../Lson/build.gradle || true
+          sed -i 's/id("org.jetbrains.kotlin.jvm") version "[^"]*"/id("org.jetbrains.kotlin.jvm")/' ../Lson/build.gradle.kts || true
 
       - name: Build Debug APK
         run: ./gradlew --no-daemon :app:assembleDebug
