@@ -65,4 +65,6 @@
     <color name="ranking_rank_3_end">#00BB7E50</color>
 
     <color name="ranking_rank_other">#CCCCCC</color>
+
+    <color name="alpha_20_00">#20000000</color>
 </resources>
