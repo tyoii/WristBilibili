@@ -69,5 +69,9 @@ dependencies {
     implementation 'org.projectlombok:lombok:1.16.18'
     implementation 'javax.annotation:javax.annotation-api:1.2'
 
+    // 内置播放器
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.7'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.7'
+
     //implementation 'cn.luern0313.lson:Lson:0.6'
 }
