@@ -20,7 +20,14 @@ buildscript {
 allprojects {
     repositories {
         google()
+        mavenCentral()
         jcenter()
+
+        // 兼容旧依赖仓库（部分 jcenter 下线库可从镜像拉取）
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+
         maven { url "https://jitpack.io" }
         maven { url 'https://dl.bintray.com/jonathanfinerty/maven' }
     }
