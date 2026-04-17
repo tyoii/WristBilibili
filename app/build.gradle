@@ -57,7 +57,8 @@ dependencies {
     implementation 'com.google.zxing:core:3.4.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'cn.carbs.android:ExpandableTextView:1.0.3'
-    implementation 'com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.6'
+    // 原 WaveSwipeRefreshLayout 依赖已下线，使用兼容封装替代
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'org.jsoup:jsoup:1.11.3'
     implementation 'me.panpf:sketch:2.7.0'
     implementation 'com.liulishuo.filedownloader:library:1.7.7'
