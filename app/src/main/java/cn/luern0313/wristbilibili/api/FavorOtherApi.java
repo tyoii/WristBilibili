@@ -25,7 +25,7 @@ public class FavorOtherApi
     private final String csrf;
     private final ArrayList<String> webHeaders;
 
-    public FavorArticleApi()
+    public FavorOtherApi()
     {
         this.ctx = MyApplication.getContext();
         this.csrf = SharedPreferencesUtil.getString(SharedPreferencesUtil.csrf, "");
