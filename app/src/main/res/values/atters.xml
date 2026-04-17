@@ -29,6 +29,50 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="ExceptionHandlerView">
+        <attr name="show_loading" format="boolean" />
+        <attr name="wave_swipe_refresh_view" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleButtonView">
+        <attr name="name_default" format="reference|string" />
+        <attr name="name_color" format="reference|color" />
+        <attr name="is_fill_bg" format="reference|boolean" />
+        <attr name="src_unchecked" format="reference" />
+        <attr name="src_checked" format="reference" />
+        <attr name="is_checked" format="reference|boolean" />
+        <attr name="fill_bg_color" format="reference|color" />
+        <attr name="is_progress" format="reference|boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DragSortListView">
+        <attr name="collapsed_height" format="dimension" />
+        <attr name="track_drag_sort" format="boolean" />
+        <attr name="float_alpha" format="float" />
+        <attr name="drag_enabled" format="boolean" />
+        <attr name="slide_shuffle_speed" format="float" />
+        <attr name="drag_scroll_start" format="float" />
+        <attr name="max_drag_scroll_speed" format="float" />
+        <attr name="remove_animation_duration" format="integer" />
+        <attr name="drop_animation_duration" format="integer" />
+        <attr name="use_default_controller" format="boolean" />
+        <attr name="remove_enabled" format="boolean" />
+        <attr name="remove_mode" format="enum">
+            <enum name="clickRemove" value="0" />
+            <enum name="flingRemove" value="1" />
+        </attr>
+        <attr name="sort_enabled" format="boolean" />
+        <attr name="drag_start_mode" format="enum">
+            <enum name="onDown" value="0" />
+            <enum name="onDrag" value="1" />
+            <enum name="onLongPress" value="2" />
+        </attr>
+        <attr name="drag_handle_id" format="reference" />
+        <attr name="fling_handle_id" format="reference" />
+        <attr name="click_remove_id" format="reference" />
+        <attr name="float_background_color" format="color" />
+    </declare-styleable>
+
     <attr name="colorTitle" format="color" />
     <attr name="colorTitleBackground" format="color" />
     <attr name="colorButtonText" format="color" />
@@ -42,15 +86,9 @@
     <attr name="colorListDivider" format="color" />
     <attr name="colorCardViewStroke" format="color" />
 
+    <!-- aliases used by older layouts/themes -->
     <attr name="colorLayerBackground" format="color" />
-
     <attr name="colorMenuIconBackground" format="color" />
-
     <attr name="colorTitleGrey" format="color" />
-
-
-    <declare-styleable name="ExceptionHandlerView">
-        <attr name="show_loading" format="boolean" />
-        <attr name="wave_swipe_refresh_view" format="reference" />
-    </declare-styleable>
+    <attr name="colorBackground" format="color" />
 </resources>
