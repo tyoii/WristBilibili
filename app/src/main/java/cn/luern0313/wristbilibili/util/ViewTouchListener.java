@@ -15,6 +15,7 @@ public class ViewTouchListener implements View.OnTouchListener
     private final View view;
     private final TitleView.TitleViewListener titleViewListener;
     private final CustomViewListener customViewListener;
+    private View.OnTouchListener viewTouchListener;
     private float endY;
     private boolean isDown;
 
@@ -28,6 +29,12 @@ public class ViewTouchListener implements View.OnTouchListener
         this.view = view;
         this.titleViewListener = titleViewListener;
         this.customViewListener = customViewListener;
+    }
+
+    public ViewTouchListener setViewTouchListener(View.OnTouchListener viewTouchListener)
+    {
+        this.viewTouchListener = viewTouchListener;
+        return this;
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -71,7 +78,8 @@ public class ViewTouchListener implements View.OnTouchListener
                 }
                 break;
         }
-        return false;
+
+        return viewTouchListener != null && viewTouchListener.onTouch(v, event);
     }
 
     public interface CustomViewListener

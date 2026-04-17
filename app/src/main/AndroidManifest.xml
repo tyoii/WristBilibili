@@ -43,16 +43,15 @@
         <activity android:name=".ui.MenuActivity" />
         <activity android:name=".ui.LoginActivity" />
         <activity android:name=".ui.VideoActivity" />
-        <activity android:name=".ui.FollowmeActivity" />
+        <activity android:name=".ui.FollowMeActivity" />
         <activity android:name=".ui.SupportActivity" />
         <activity android:name=".ui.JoinqqActivity" />
         <activity android:name=".ui.OpensourceActivity" />
         <activity android:name=".ui.AboutActivity" />
-        <activity android:name=".ui.QRActivity" />
         <activity android:name=".ui.ImgActivity" />
         <activity android:name=".ui.LogsoffActivity" />
         <activity android:name=".ui.FavorVideoActivity" />
-        <activity android:name=".ui.FavorArticleActivity"/>
+        <activity android:name=".ui.FavorOtherActivity"/>
         <activity android:name=".ui.UserActivity" />
         <activity android:name=".ui.SueActivity" />
         <activity android:name=".ui.ReplyActivity" />
@@ -64,6 +63,7 @@
         <activity android:name=".ui.SelectPartActivity" />
         <activity android:name=".ui.BangumiActivity" />
         <activity android:name=".ui.ArticleActivity" />
+        <activity android:name=".ui.RankingActivity" />
         <activity android:name=".ui.UnsupportedLinkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import cn.luern0313.wristbilibili.R;
 import cn.luern0313.wristbilibili.models.RankingModel;
+import cn.luern0313.wristbilibili.models.RankingModel.RankingVideoModel;
 import cn.luern0313.wristbilibili.util.DataProcessUtil;
 import cn.luern0313.wristbilibili.util.ImageTaskUtil;
 import cn.luern0313.wristbilibili.util.LruCacheUtil;
@@ -34,10 +35,10 @@ public class RankingAdapter extends BaseAdapter
 
     private RankingAdapterListener rankingAdapterListener;
 
-    private ArrayList<RankingModel> rkList;
+    private ArrayList<RankingVideoModel> rkList;
     private ListView listView;
 
-    public RankingAdapter(LayoutInflater inflater, ArrayList<RankingModel> rkList, ListView listView, RankingAdapterListener rankingAdapterListener)
+    public RankingAdapter(LayoutInflater inflater, ArrayList<RankingVideoModel> rkList, ListView listView, RankingAdapterListener rankingAdapterListener)
     {
         this.ctx = MyApplication.getContext();
         this.mInflater = inflater;
@@ -67,7 +68,7 @@ public class RankingAdapter extends BaseAdapter
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup)
     {
-        RankingModel rankingVideo = rkList.get(position);
+        RankingVideoModel rankingVideo = rkList.get(position);
         ViewHolder viewHolder;
         if(convertView == null)
         {

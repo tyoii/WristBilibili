@@ -98,7 +98,7 @@ public class MainActivity extends BaseActivity implements TitleView.TitleViewLis
                 SharedPreferencesUtil.putInt(SharedPreferencesUtil.ver, pi.versionCode);
 
                 if(SharedPreferencesUtil.contains(SharedPreferencesUtil.cookies))
-                    startActivity(new Intent(ctx, FollowmeActivity.class));
+                    startActivity(new Intent(ctx, FollowMeActivity.class));
                 Intent intent = new Intent(ctx, TextActivity.class);
                 intent.putExtra("title", "更新日志");
                 intent.putExtra("text", getString(R.string.update));

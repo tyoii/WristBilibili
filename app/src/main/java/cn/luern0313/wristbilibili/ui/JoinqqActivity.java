@@ -13,7 +13,7 @@ import cn.luern0313.wristbilibili.adapter.JoinQQAdapter;
 import cn.luern0313.wristbilibili.util.ViewTouchListener;
 import cn.luern0313.wristbilibili.widget.TitleView;
 
-public class JoinQqActivity extends BaseActivity implements TitleView.TitleViewListener
+public class JoinqqActivity extends BaseActivity implements TitleView.TitleViewListener
 {
     Context ctx;
     LayoutInflater inflater;
