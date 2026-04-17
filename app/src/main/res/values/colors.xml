@@ -67,4 +67,6 @@
     <color name="ranking_rank_other">#CCCCCC</color>
 
     <color name="alpha_20_00">#20000000</color>
+
+    <color name="alpha_ee_ff">#EEFFFFFF</color>
 </resources>

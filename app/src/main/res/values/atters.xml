@@ -91,4 +91,7 @@
     <attr name="colorMenuIconBackground" format="color" />
     <attr name="colorTitleGrey" format="color" />
     <attr name="colorBackground" format="color" />
+
+    <attr name="colorCardViewBackground" format="color" />
+    <attr name="riv_oval" format="boolean" />
 </resources>
