@@ -1,0 +1,42 @@
+name: Android CI Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout WristBilibili
+        uses: actions/checkout@v4
+
+      # settings.gradle points :Lson to ../Lson, so clone it in runner workspace parent.
+      - name: Clone Lson dependency
+        run: git clone --depth=1 https://github.com/luern0313/Lson.git ../Lson
+
+      - name: Setup JDK 8
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
+      - name: Build Debug + Release APK
+        run: ./gradlew --no-daemon --stacktrace assembleDebug assembleRelease
+
+      - name: Upload APK artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: wristbilibili-apks
+          path: |
+            app/build/outputs/apk/debug/*.apk
+            app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
